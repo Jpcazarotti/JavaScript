@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números pares existentes</title>
+</head>
+<body>
+    <h1>7ºAtividade</h1>
+    <p>Crie um programa que solicita ao usuário um número e conta quantos números pares existem de 1 até esse número.</p>
+    <hr>
+    <script>        
+        let numero = parseInt(prompt("Digite um número inteiro, de sua preferência."));
+        let qntdpares = []; /*Array("[]") - serve para armazenar, aqui ele esta armazenando os números que são pares.*/
+        for(let I = 1; I <= numero; I++){
+            if(I % 2 === 0){
+                qntdpares.push(I); /*.push - serve para ir acumulando os números que são pares no array.*/
+            }
+        }
+        let pares = qntdpares.join(", ");/*.join - serve para transformar o array em uma string que será contada os caracteres pelo ".length" à baixo.*/
+        document.write(`Existem ${qntdpares.length} números pares de 1 até ${numero}. São eles: ${pares}.`);
+    </script>   
+    <hr>       
+</body>
+</html>

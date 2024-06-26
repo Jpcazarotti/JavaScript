@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma</title>
+</head>
+<body>
+    <h1>5ºAtividade</h1>
+    <p>Crie um programa que some os números de 1 até o número fornecido pelo usuário e exiba o resultado.</p>
+    <hr>
+    <script>        
+        let numero = parseInt(prompt("Digite um número inteiro, de sua preferência."));
+        let soma = 0;
+        for(let I = 1; I <= numero; I++){
+            soma += I;
+        }
+        document.write(`A soma de todos os números de 1 à ${numero}, é ${soma}.`);
+    </script> 
+    <hr>       
+</body>
+</html>

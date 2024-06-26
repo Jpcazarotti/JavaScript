@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula 7 - Funções de Eventos</title>
+</head>
+<body>
+
+    <button id="btnAlerta">Mostrar Alerta</button>
+    <br>
+    <p id="textoParagrafo">Texto Inicial</p>
+    <br>
+    <button id="textoBotao">Alterar Texto</button>
+    <br>
+    <hr>
+    <br>
+    <div id="corDiv" style="height: 100px; width: 100px; background-color: blue;"></div>
+    <br>
+    <div id="adicionarParagrafo">Adicionar Parágrafo</div>
+    <br>
+    <button id="toggleDivBotao">Mostrar/Esconder</button>
+    <br>
+    <br>
+    <button id="resetar">Resetar</button>
+
+    <script>
+        const btnAlerta = document.getElementById('btnAlerta');
+        const textoParagrafo = document.getElementById('textoParagrafo');
+        const textoBotao = document.getElementById('textoBotao');
+        const corDiv = document.getElementById('corDiv');
+        const adicionarParagrafo = document.getElementById('adicionarParagrafo');
+        const toggleDivBotao = document.getElementById('toggleDivBotao');
+        const resetar = document.getElementById('resetar');
+
+        btnAlerta.addEventListener('click', function(){
+            alert("Botão de Alerta Clicado!");
+        });
+
+        textoParagrafo.addEventListener('click', function(){
+            textoParagrafo.textContent = "Mudou de Texto o Parágrafo!!";
+        });
+
+        textoBotao.addEventListener('click', function(){
+            textoBotao.textContent = "Texto do Botão alterado com sucesso!!!";
+        });
+
+        corDiv.addEventListener('click', function(){
+            corDiv.style.backgroundColor = "pink";
+        });
+
+        adicionarParagrafo.addEventListener('click', function(){
+           const paragrafo = document.createElement("p");
+           paragrafo.textContent = ("Novo Parágrafo adicionado com sucesso");
+           document.body.appendChild(paragrafo);
+        });
+
+        toggleDivBotao.addEventListener('click', function(){
+           if(corDiv.style.display === 'none'){
+            corDiv.style.display = 'block';
+           }  else{
+            corDiv.style.display = 'none';
+           }
+        });
+
+        resetar.addEventListener('click', function(){
+            textoParagrafo.textContent = "Texto Inicial";
+            textoBotao.textContent = "Alterar Texto";
+            corDiv.style.backgroundColor = "blue";
+            const paragrafoExtra = document.querySelectorAll("body > p");
+            console.log(paragrafoExtra);
+            paragrafoExtra.forEach((p, index) => {
+                if(index){
+                    p.remove()
+                }
+            });
+        });
+
+    </script>
+    
+</body>
+</html>

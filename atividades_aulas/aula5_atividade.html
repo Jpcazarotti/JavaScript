@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>    
+    <title>Aula 5 - Laço de Repetição - Atividade</title>
+</head>
+<body>
+    <h1>Estrutura Laço de Repetição em JavaScript</h1>    
+    <p>Crie um programa que solicite qual a tabuada será impressa na tela.</p>
+    <hr>
+    <script>
+        let tabuada = parseInt(prompt("Digite a tabuada que você deseja."));
+        var contador = 0;        
+        document.write("A tabuada do " +tabuada +" é :");  
+        document.write("<br>");      
+        while(contador <= 10){
+            document.write("<br>");
+            document.write( contador + " x " + tabuada + " = " + contador*tabuada );
+            document.write("<br>");
+            contador++;                     
+        }                      
+    </script>
+    <hr>
+</body>
+</html>
