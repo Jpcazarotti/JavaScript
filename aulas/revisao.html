@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula de Revisão</title>
+    <style>
+        #boxresul {
+            border: 1px solid #000000;
+            min-height: 50px;
+            width: 300px;
+            margin-bottom: 20px;
+            background-color: aliceblue;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aula de Revisão Java Script</h1>
+    <div id="boxresul">
+
+    </div>
+    <script>
+
+        function imprimirResul(mensagem){
+            const boxresul = document.getElementById("boxresul");
+            boxresul.innerHTML += mensagem + "<hr>";
+        }
+
+        let num1 = 10;
+        let num2 = 20;
+
+        let resul = num1 + num2;
+
+        console.log("O resultado é: " + resul);
+        document.write("O resultado é: " + resul);
+
+        imprimirResul("O resultado é: " + resul);
+
+        // Verificar se um número é par ou ímpar
+
+        let numero = 10;
+        if(numero % 2 == 0){
+            imprimirResul("O número "+numero+" é Par!");
+        } else {
+            imprimirResul("O número "+numero+" é Ímpar!");
+        }
+
+        // Contar de 1 à 5, usando laço de repetição
+
+        for(let i = 1; i <= 5; i++){
+            imprimirResul(i);
+        }   
+
+        let i = 1;
+        while(i <= 5){
+            imprimirResul(i);
+            i++
+        }
+
+        // Crie uma função que verifique se uma pessoa pode votar
+
+        function podeVotar(idade){
+            if(idade >= 16){
+                return "Você pode votar!";
+            }
+            return "Você não pode votar!";
+        }
+
+        let idade = 17;
+        imprimirResul(podeVotar(idade));
+
+        // Cálculos simples (adição, subtração, mutiplicação, divisão)
+
+        let nunx = 10;
+        let numy = 15;
+
+        imprimirResul("Adição é " + (nunx + numy));
+        imprimirResul("Subtração é " + (nunx - numy));
+        imprimirResul("Multiplicação é " + (nunx * numy));
+        imprimirResul("Divisão é " + (nunx / numy));
+
+        // Verificar faixa de idade (criança, adolescente, adulto e idoso)
+
+        let idadePessoa = 18;
+        if(idadePessoa < 10){
+            imprimirResul("A pessoa é uma criança!");
+        }else if(idadePessoa >= 10 && idadePessoa < 20){
+            imprimirResul("A pessoa é um adolescente!");
+        }else if(idadePessoa >= 20 && idadePessoa < 60){
+            imprimirResul("A pessoa é um adulto!");
+        }else {
+            imprimirResul("A pessoa é um idoso!");
+        }
+    </script>    
+</body>
+</html>
