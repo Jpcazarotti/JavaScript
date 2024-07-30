@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3ª Atividade</title>
+    <style>
+      #box_description {
+        border: 1px solid #000000;
+        min-height: 50px;
+        margin-bottom: 20px;
+        background-color: aliceblue;
+        border-radius: 5px;
+      }
+
+      #box_resul {
+        border: 1px solid #000000;
+        margin-top: 20px;
+        min-height: 55px;
+        width: 500px;
+        margin-bottom: 20px;
+        background-color: floralwhite;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><em>Atividade 3</em></h1>
+    <div id="box_description">
+      <p><strong>Descrição: </strong>Determinar o maior de dois números.</p>
+    </div>
+    <hr />
+    <div id="box_resul"></div>
+    <script>
+      function imprimirResul(mensagem) {
+        const box_resul = document.getElementById("box_resul");
+        box_resul.innerHTML += "<br>" + mensagem;
+      }
+
+      let num1 = parseFloat(prompt("Digite o 1ºnúmero à baixo!"));
+      let num2 = parseFloat(prompt("Digite o 2ºnúmero à baixo!"));
+
+      if (num1 > num2) {
+        imprimirResul("O número " + num1 + " é maior que o número " + num2);
+      } else {
+        imprimirResul("O número " + num2 + " é maior que o número " + num1);
+      }
+    </script>
+  </body>
+</html>

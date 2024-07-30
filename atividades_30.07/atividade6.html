@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6ª Atividade</title>
+    <style>
+      #box_description {
+        border: 1px solid #000000;
+        min-height: 50px;
+        margin-bottom: 20px;
+        background-color: aliceblue;
+        border-radius: 5px;
+      }
+
+      #box_resul {
+        border: 1px solid #000000;
+        margin-top: 20px;
+        min-height: 55px;
+        width: 500px;
+        margin-bottom: 20px;
+        background-color: floralwhite;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><em>Atividade 6</em></h1>
+    <div id="box_description">
+      <p><strong>Descrição: </strong>Encontrar a raiz quadrada de um número.</p>
+    </div>
+    <hr />
+    <div id="box_resul"></div>
+    <script>
+      function imprimirResul(mensagem) {
+        const box_resul = document.getElementById("box_resul");
+        box_resul.innerHTML += "<br>" + mensagem;
+      }
+
+      let num = parseFloat(
+        prompt(
+          "Digite o número que você deseja encontrar a raiz quadrada à baixo!"
+        )
+      );
+
+      let resul = num ** 0.5;
+
+      imprimirResul("A raiz quadrada de " + num + " é " + resul);
+    </script>
+  </body>
+</html>
