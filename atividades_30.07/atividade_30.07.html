@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade - 30/07</title>
+    <style>
+      h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: darkslategrey;
+      }
+
+      #box_description {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid #000000;
+        min-height: 50px;
+        margin-bottom: 20px;
+        background-color: aliceblue;
+        border-radius: 5px;
+      }
+
+      .bot {
+        background-color: darkslateblue;
+        color: aliceblue;
+        width: 140px;
+        height: 35px;
+        border: none;
+        box-shadow: 1px 1px 5px rgb(0, 0, 0, 0.7);
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      #box_resul {
+        border: 1px solid #000000;
+        margin-top: 20px;
+        min-height: 55px;
+        width: 500px;
+        margin-bottom: 20px;
+        background-color: floralwhite;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><em>Escolha o que deseja fazer!</em></h1>
+    <div id="box_description">
+      <button class="bot" onclick="pnz()">P - N - Z</button>
+      <button class="bot" onclick="media()">Média</button>
+      <button class="bot" onclick="maiorde2()">Maior de 2</button>
+      <button class="bot" onclick="cf()">°C -> °F</button>
+      <button class="bot" onclick="area()">Ârea do Círculo</button>
+      <button class="bot" onclick="raiz()">Raiz Quadrada</button>
+      <button class="bot" onclick="imc()">IMC</button>
+    </div>
+    <hr />
+    <div id="box_resul"></div>
+    <script>
+      function imprimirResul(mensagem) {
+        const box_resul = document.getElementById("box_resul");
+        box_resul.innerHTML += "<br>" + mensagem;
+      }
+
+      function pnz() {
+        let num = parseFloat(prompt("Digite um número à baixo!"));
+        if (num < 0) {
+          imprimirResul("O número " + num + " é negativo!");
+        } else if (num == 0) {
+          imprimirResul("O número digitado é " + num + ", neutro!");
+        } else {
+          imprimirResul("O número " + num + " é positivo!");
+        }
+      }
+
+      function media() {
+        let num1 = parseFloat(prompt("Digite o 1ºnúmero à baixo!"));
+        let num2 = parseFloat(prompt("Digite o 2ºnúmero à baixo!"));
+        let num3 = parseFloat(prompt("Digite o 3ºnúmero à baixo!"));
+
+        let resul = (num1 + num2 + num3) / 3;
+        let resulC = resul.toFixed(2);
+
+        imprimirResul("A média dos três números é " + resulC);
+      }
+
+      function maiorde2() {
+        let num1 = parseFloat(prompt("Digite o 1ºnúmero à baixo!"));
+        let num2 = parseFloat(prompt("Digite o 2ºnúmero à baixo!"));
+
+        if (num1 > num2) {
+          imprimirResul("O número " + num1 + " é maior que o número " + num2);
+        } else {
+          imprimirResul("O número " + num2 + " é maior que o número " + num1);
+        }
+      }
+
+      function cf() {
+        let celsius = parseFloat(
+          prompt("Digite a temperatura em Celsius à baixo!")
+        );
+
+        let fahrenheit = celsius * (9 / 5) + 32;
+
+        imprimirResul(
+          "A temperatura " + celsius + "°C em fahrenheit é " + fahrenheit + "°F"
+        );
+      }
+
+      function area() {
+        let raio = parseFloat(prompt("Digite o raio do círculo à baixo!"));
+        let area = 3.14 * raio ** 2;
+
+        imprimirResul("A área do círculo é " + area);
+      }
+
+      function raiz() {
+        let num = parseFloat(
+          prompt(
+            "Digite o número que você deseja encontrar a raiz quadrada à baixo!"
+          )
+        );
+
+        let resul = num ** 0.5;
+
+        imprimirResul("A raiz quadrada de " + num + " é " + resul);
+      }
+
+      function imc() {
+        let peso = parseFloat(prompt("Digite o seu peso à baixo!"));
+        let altura = parseFloat(prompt("Digite a sua altura à baixo!"));
+        let imc = peso / altura ** 2;
+        let imcC = imc.toFixed(2);
+
+        imprimirResul("O seu IMC é " + imcC);
+      }
+    </script>
+  </body>
+</html>
