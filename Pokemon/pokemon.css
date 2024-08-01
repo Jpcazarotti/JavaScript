@@ -1,0 +1,30 @@
+body {
+    background-color: azure;
+}
+
+fieldset {
+    background-color: #ededed;
+}
+
+#main {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 400px;
+  margin: 0 auto;
+}
+
+#boxInfoPokemon {
+  background-color: #ededed;
+  border: 1px solid #aaaaaa;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+#boxInfoPokemon h2 {
+  text-align: center;
+}
+
+#boxInfoPokemon img {
+    display: block;
+    margin: auto;
+}
