@@ -23,16 +23,16 @@ function infoPokemon() {
         <p><strong>Altura: </strong>${data.height / 10} m</p>
         <p><strong>Peso: </strong>${data.weight / 10} kg</p>
         <p><strong>Tipo: </strong>${data.types
-          .map(typeInfo => typeInfo.type.name)
+          .map((typeInfo) => typeInfo.type.name)
           .join(", ")}</p>                      
         <p><strong>Habilidade: </strong>${data.abilities
-          .map(abilityInfo => abilityInfo.ability.name)
+          .map((abilityInfo) => abilityInfo.ability.name)
           .join(", ")}</p>
         `;
 
       boxInfoPokemon.innerHTML = dadosPokemon;
     })
-    .catch(error => {
-        boxInfoPokemon.innerHTML = `<p>${error.message}</p>`
+    .catch((error) => {
+      boxInfoPokemon.innerHTML = `<p>${error.message}</p>`;
     });
 }
