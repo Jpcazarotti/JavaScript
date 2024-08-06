@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clima</title>
+    <meta name="description" content="Veja o tempo da onde você quiser aqui!" />
+    <meta name="keywords" content="tempo, temperatura, clima" />
+    <link rel="stylesheet" href="/atividade_API/tempo.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div>
+        <fieldset>
+          <legend>Digite a cidade que você deseja ver o clima</legend>
+          <input type="text" id="nomeCidade" placeholder="Nome da Cidade" />
+          <button id="btnBuscar" onclick="clima()">Buscar</button>
+        </fieldset>
+      </div>
+      <div id="boxClima">
+        <div id="temperatura"></div>
+        <div id="nomeCidadeDisplay"></div>        
+        <div id="date"></div>
+        <div id="feels"></div>        
+        <div id="temp_max"></div>
+        <div id="temp_min"></div>
+        <div id="sky"></div>
+        <div id="humidity"></div>
+        <div id="vento"></div>
+        <div id="nuvens"></div>
+      </div>
+    </div>
+    <script src="/atividade_API/tempo.js"></script>
+  </body>
+</html>
