@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 8 - Array</title>
+  </head>
+  <body>
+    <script>
+      let fruta = "maça";
+
+      // Usando Colchetes
+      let frutas = ["Maça", "Banana", "Tomate"];
+
+      // Usando o construtor Array
+      let numeros = new Array(1, 5, 7, 9, 8);
+
+      console.log(frutas);
+
+      // Acessando os elementos do Array
+      console.log(frutas[1]);
+
+      //Substituir item no Array
+      frutas[0] = "Manga";
+
+      console.log(frutas);
+
+      //Adicionar um item no final do Array
+      frutas.push("Pera");
+
+      console.log(frutas);
+
+      //Remover o último item no Array
+      frutas.pop();
+
+      console.log(frutas);
+
+      //Remover o primeiro item no Array
+      frutas.shift();
+
+      console.log(frutas);
+
+      //Adiciona o primeiro item no Array
+      frutas.unshift("Melancia");
+
+      console.log(frutas);
+
+      //Retornar a quantidade do Array
+      console.log(frutas.length);
+
+      //Imprimir os itens do Array
+      for (let i = 0; i < frutas.length; i++) {
+        console.log(frutas[i]);
+      }
+
+      console.log("|");
+
+      frutas.forEach(function (item, key) {
+        console.log(item, key);
+      });
+
+      let novaListaFrutas = frutas.map(function (item) {
+        //if ((item == "Melancia")) {
+        //   return item.toUpperCase();
+        //}
+        //return item;
+
+        return item == "Melancia" ? item.toUpperCase() : item;
+      });
+
+      console.log(novaListaFrutas);
+    </script>
+  </body>
+</html>
