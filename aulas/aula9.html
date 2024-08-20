@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 9 - Objeto</title>
+  </head>
+  <body>
+    <script>
+      let pessoa = {
+        nome: "João Pedro",
+        idade: 16,
+        profissao: "Desenvolvedor",
+        salario: 0,
+      };
+
+      //Acessando dados de um objeto
+
+      console.log(pessoa);
+      console.log(pessoa.nome, pessoa.idade);
+      console.log(pessoa["salario"]);
+
+      //Modificando dados de uma propriedade
+
+      pessoa.idade = 30;
+      console.log(pessoa);
+
+      //Adicionar uma nova propriedade
+
+      pessoa.genero = "Masculino";
+      console.log(pessoa);
+
+      //Remover propriedade
+
+      delete pessoa.salario;
+      console.log(pessoa);
+
+      //Métodos de um objeto
+
+      let carro = {
+        marca: "Toyota",
+        modelo: "Corolla",
+        ano: 2020,
+        ligar: function () {
+          console.log(`O carro ${this.marca} está ligado`);
+        },
+      };
+
+      carro.ligar();
+
+      //Atividade
+
+      let celular = {
+        marca: "Samsung",
+        modelo: "Galaxy A32",
+        estoque: 245,
+        preco: 1300,
+      };
+
+      console.log(celular);
+
+      //Adicionando propriedade
+
+      celular.ram = "4Gb";
+      console.log(celular);
+
+      //Deletando propriedade
+
+      delete celular.estoque;
+      console.log(celular);
+
+    </script>
+  </body>
+</html>
