@@ -69,6 +69,58 @@
       delete celular.estoque;
       console.log(celular);
 
+      ///
+
+      let aluno = {
+        nome: "João Pedro",
+        idade: 16,
+        curso: "Técnico em Informática para Internet",
+        notas: [7.5, 9, 10, 10],
+      };
+
+      console.log("Olá,", aluno.nome);
+
+      console.log("Suas notas são: ");
+
+      // Impressão de Todas as Notas
+
+      aluno.notas.forEach(function (nota) {
+        console.log(nota);
+      });
+
+      console.log(aluno.notas.join(", "));
+
+      // Média das Notas
+
+      let soma = 0;
+
+      aluno.notas.forEach(function (nota) {
+        soma += nota;
+      });
+
+      console.log("A média das notas é: ", soma / aluno.notas.length);
+
+      // Método CalcularMedia() no objeto aluno
+      let alunoB = {
+        nome: "João Pedro",
+        idade: 16,
+        curso: "Técnico de Informática para Internet",
+        notas: [8, 9.5, 9, 8.5],
+        calcularMedia: function () {
+          let soma = 0;
+          this.notas.forEach(function (nota) {
+            soma += nota;
+          });
+          return soma / this.notas.length;
+        },
+      };
+
+      console.log(
+        "Olá",
+        alunoB.nome,
+        ", você tem uma média ",
+        alunoB.calcularMedia()
+      );
     </script>
   </body>
 </html>
